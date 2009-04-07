@@ -1,4 +1,4 @@
-$Id: CHANGELOG.txt,v 1.3 2009-04-07 19:01:04 darrenoh Exp $
+$Id: CHANGELOG.txt,v 1.4 2009-04-07 21:14:39 darrenoh Exp $
 
 Viewfield x.x-x.x, xxxx-xx-xx
 -----------------------------
@@ -38,6 +38,7 @@ by Darren Oh: Fixed more error notices.
 by Darren Oh: Added translation template.
 by Darren Oh: Fixed typo in changelog.
 by Darren Oh: Moved theme functions file to theme directory.
+by Darren Oh: Changed install file description.
 
 
 Viewfield 5.x-1.x, 2007-02-05
