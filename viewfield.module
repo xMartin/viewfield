@@ -1,5 +1,5 @@
 <?php
-// $Id: viewfield.module,v 1.15 2009-04-07 18:42:31 darrenoh Exp $
+// $Id: viewfield.module,v 1.16 2009-04-07 19:03:41 darrenoh Exp $
 
 /**
  * @file
@@ -342,7 +342,7 @@ function viewfield_theme() {
   $theme_info =  array(
     'viewfield_select' => array(
       'arguments' => array('element' => NULL),
-      'file' => 'includes/viewfield.theme.inc',
+      'file' => 'theme/viewfield.theme.inc',
     )
   );
   $displays = views_fetch_plugin_data('display');
@@ -350,7 +350,7 @@ function viewfield_theme() {
     $theme_info['viewfield_formatter_'. $type] = array(
       'arguments' => array('element' => NULL),
       'function' => 'theme_viewfield_formatter',
-      'file' => 'includes/viewfield.theme.inc',
+      'file' => 'theme/viewfield.theme.inc',
     );
   }
   return $theme_info;
