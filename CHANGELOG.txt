@@ -1,4 +1,4 @@
-$Id: CHANGELOG.txt,v 1.5 2009-04-20 15:43:37 darrenoh Exp $
+$Id: CHANGELOG.txt,v 1.6 2009-05-22 01:19:35 darrenoh Exp $
 
 Viewfield x.x-x.x, xxxx-xx-xx
 -----------------------------
@@ -40,6 +40,7 @@ by Darren Oh: Fixed typo in changelog.
 by Darren Oh: Moved theme functions file to theme directory.
 by Darren Oh: Changed install file description.
 by Darren Oh: Fixed update to enable fields.
+#373373 by ramsalt: Fixed page view changing node title.
 
 
 Viewfield 5.x-1.x, 2007-02-05

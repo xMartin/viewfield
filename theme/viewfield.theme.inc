@@ -1,5 +1,5 @@
 <?php
-// $Id: viewfield.theme.inc,v 1.1 2009-04-07 19:01:03 darrenoh Exp $
+// $Id: viewfield.theme.inc,v 1.2 2009-05-22 01:19:35 darrenoh Exp $
 
 /**
  * @file
@@ -119,15 +119,8 @@ function _viewfield_get_view_content($view_name, $view_args, $display, $node) {
     if ($node->nid) {
       _viewfield_nodestack_push($node->nid);
     }
-    $view = views_get_view($view_name);
-    if (!empty($view)) {
-      $view->set_display($display);
-      $view->set_arguments($view_args);
-      if ($view->access(array($display), $user)) {
-        $view->execute_display();
-        $output .= $view->render();
-      }
-    }
+    array_unshift($view_args, $view_name, $display);
+    $output .= call_user_func_array('views_embed_view', $view_args);
     // This node is "safe" again.
     if ($node->nid) {
       _viewfield_nodestack_pop();
