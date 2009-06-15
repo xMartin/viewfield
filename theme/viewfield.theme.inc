@@ -1,5 +1,5 @@
 <?php
-// $Id: viewfield.theme.inc,v 1.3 2009-05-24 05:33:34 darrenoh Exp $
+// $Id: viewfield.theme.inc,v 1.4 2009-06-15 19:13:02 darrenoh Exp $
 
 /**
  * @file
@@ -83,7 +83,7 @@ function _viewfield_get_view_args($token_enabled, $vargs, $node) {
     // For backwards compatibility, we scan for %nid, etc.
     global $user;
     foreach ($args as $key => $a) {
-      $args[$key] = strtr($a, array('%nid' => $node->nid, '%author' => $node->uid, '%viewer' => $user->uid));
+      $args[$key] = strtr($a, array('%nid' => $node->nid, '%author' => $node_values->uid, '%viewer' => $user->uid));
     }
   }
   return $args;
