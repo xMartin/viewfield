@@ -1,5 +1,5 @@
 <?php
-// $Id: viewfield.module,v 1.17 2009-05-24 05:33:35 darrenoh Exp $
+// $Id: viewfield.module,v 1.18 2009-06-15 19:13:29 darrenoh Exp $
 
 /**
  * @file
@@ -86,7 +86,7 @@ function viewfield_field($op, &$node, $field, &$items, $teaser, $page) {
         }
       }
       break;
-    case 'load':
+    case 'sanitize':
       foreach ($items as $delta => $item) {
         $item = empty($item['vname']) || $field['widget']['force_default'] ? $field['super_default_widget'] : $item;
         if ($field['super_default']) {
