@@ -283,7 +283,9 @@ function _viewfield_potential_references($field_settings = TRUE, $field = array(
   // views by adding an empty option, otherwise at each submit the user would
   // add a new view. If the field is required AND multiple the first widget has
   // no empty choice.
-  if (!$field_settings && (!$field['required'] || ($field['multiple'] && $delta > 0))) {
+  //if (!$field_settings && (!$field['required'] || ($field['multiple'] && $delta > 0))) {
+  // http://drupal.org/node/509406#comment-1794048
+  if ((!$field['required'] || ($field['multiple'] && $delta > 0))) {
     array_unshift($options, '<'. t('none') .'>');
   }
   return $options;
